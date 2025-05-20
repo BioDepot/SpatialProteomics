@@ -34,7 +34,7 @@ Use the [BWBQuPathClustering.ipynb](./scripts/BWBQuPathClustering.ipynb) noteboo
 
 ### Import cell clustering data back onto QuPath
 
-Run [import_clusters.groovy](./scripts/import_clusters.groovy) to import cell clustering data back into QuPath. Once finished, QuPath can show the cells with colormaps/masks on the image.
+Run [import_clusters.groovy](./scripts/import_clusters.groovy) to import cell clustering data back into QuPath. Once finished, QuPath can show the cells with colormaps/masks on the image. Source of the script is inspired from an [image.sc post from Mike Nelson](https://forum.image.sc/t/there-and-back-again-qupath-cytomap-cluster-analysis/43352/2).
 
 ## Academic Citations
 
