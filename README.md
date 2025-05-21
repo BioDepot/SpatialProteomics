@@ -26,7 +26,7 @@ Outputs are segmented cells placed on the QuPath project image.
 
 ### Export segmentation data to CSV
 
-Run the [export-all-cell-measurements_240829.groovy](./scripts/export-all-cell-measurements_240829.groovy) script to export the cell segmentation data from the image to a CSV file.
+Run the [export-all-cell-measurements_240829.groovy](./scripts/export-all-cell-measurements_240829.groovy) script to export the cell segmentation data from the image to a CSV file. Script modified from [Akoya Biosciences](https://github.com/lambrechtslab/Immunity-2024) version of StarDist segmentation.
 
 ### Cell clustering and plots via notebook
 
