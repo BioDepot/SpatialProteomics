@@ -1,12 +1,15 @@
-# Biodepot Spatial Proteomics
+# Graphical and Interactive Spatial Proteomics Image Analysis Workflow
+
+Pre-print: bioRxiv 2025.05.23.655879; [DOI](https://doi.org/10.1101/2025.05.23.65587)
 
 ![Figures](./media/images/Figure1.png)
 
 Scripts from the Biodepot spatial proteomics workflow. 
 
-## Non-Bwb Software Requirements
 
-Imaging visualization software is [QuPath](https://github.com/qupath/qupath)<sup>[1]</sup>, this workflow uses [version 0.5.1](https://github.com/qupath/qupath/releases/tag/v0.5.1). In Bwb, QuPath is used to create QuPath projects, view and modify spatial images.
+## Software Requirements
+
+Imaging visualization software is [QuPath](https://github.com/qupath/qupath)<sup>[1]</sup>, this workflow uses [version 0.5.1](https://github.com/qupath/qupath/releases/tag/v0.5.1). In our workflow, QuPath is used to create QuPath projects, view and modify spatial images.
 
 .groovy scripts require [Groovy](https://groovy-lang.org/) version >=2.4. Additional installation to install QuPath-related packages to Groovy are also required, obtained from [QuPath StarDist extension](https://github.com/qupath/qupath-extension-stardist)<sup>[2]</sup> version >=0.5.0.
 
@@ -36,7 +39,7 @@ Use the [BWBQuPathClustering.ipynb](./scripts/BWBQuPathClustering.ipynb) noteboo
 
 Run [import_clusters.groovy](./scripts/import_clusters.groovy) to import cell clustering data back into QuPath. Once finished, QuPath can show the cells with colormaps/masks on the image. Source of the script is inspired from an [image.sc post from Mike Nelson](https://forum.image.sc/t/there-and-back-again-qupath-cytomap-cluster-analysis/43352/2).
 
-## Academic Citations
+## References
 
 [1]
 Bankhead, P. et al. QuPath: Open source software for digital pathology image analysis. Scientific Reports (2017).
@@ -46,3 +49,9 @@ https://doi.org/10.1038/s41598-017-17204-5
 Uwe Schmidt, Martin Weigert, Coleman Broaddus, and Gene Myers.
 Cell Detection with Star-convex Polygons.
 International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), Granada, Spain, September 2018.
+
+## Biodepot-workflow-builder (Bwb)
+
+All graphical workflows are implemented in the Bwb platform. To learn more about the Bwb platform, please refer to https://github.com/BioDepot/BioDepot-workflow-builder
+
+Biodepot training portal: https://biodepot.github.io/training/
