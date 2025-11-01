@@ -17,9 +17,11 @@ def model = new ObservableMeasurementTableData()
 
 print "${project.getImageList().size()} images"
 
-// Get a specific environment variable
+// Get a specific environment variables
 def imageToExport = System.getenv("image_to_export")
-println "MY_ENV_VAR: $imageToExport"
+println "imageToExport: $imageToExport"
+def outputDirectory = System.getenv("output_directory")
+println "outputDirectory: $outputDirectory"
 
 def image_list = project.getImageList()
 println "Image List: " + image_list
@@ -66,7 +68,10 @@ print "using image with ${path_objects.size()} path objects"
         "Choose output. csv. file",
         new File("all-cell-measuremnts.csv"),
         FileChoosers.createExtensionFilter("csv", "*.csv"))*/
-def output_file = new File("all-cell-measurements.csv")
+def baseName = imageToExport.replaceAll(/\.qptiff$|\.tiff$/, "")
+def output_file = new File(outputDirectory, "${baseName}-cell-measurements.csv")
+println "CSV output will be written to: ${output_file.getAbsolutePath()}"
+// def output_file = new File("all-cell-measurements.csv")
 
 model.setImageData(image_data, path_objects)
 

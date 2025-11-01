@@ -3,7 +3,8 @@
 // Version 3, dramatic speed increase and error checking.
 // Modified from Michael Nelson February 2021.
 def project = getProject()
-def folder = new File("/data/clustering_data_export")
+// def folder = new File("/data/clustering_data_export")
+def folder = new File(System.getenv("clustering_dir"))
 // Create map for dynamic cluster-to-color mapping
 def clusterColorMap = [:]
 folder.listFiles().each { file ->
@@ -17,9 +18,9 @@ folder.listFiles().each { file ->
     length = row.split(',').size()
     //measurementNames -= 'X'
     //measurementNames -= 'Y'
-    print measurementNames
-    print "Adding results from " + file
-    print "This may take some time, please be patient"
+    println measurementNames
+    println "Adding results from " + file
+    println "This may take some time, please be patient"
     csv = []
     Set imageList = []
     while ((row = csvReader.readLine()) != null) {
@@ -31,12 +32,12 @@ folder.listFiles().each { file ->
     int z = 0
 
 
-    print imageList
+    println imageList
     imageList.each { image ->
         entry = project.getImageList().find { it.getImageName() == image }
 
         if (entry == null) {
-            print "NO ENTRIES FOR IMAGE " + image; return;
+            println "NO ENTRIES FOR IMAGE " + image; return;
         }
         imageData = entry.readImageData()
         hierarchy = imageData.getHierarchy()
@@ -47,18 +48,72 @@ folder.listFiles().each { file ->
         objects = hierarchy.getDetectionObjects()//.findAll{it.getPathClass() == getPathClass("Islet")}
         ob = new ObservableMeasurementTableData();
         ob.setImageData(imageData, objects);
+        
+	cellnum = 1
 
         csvSubset.each { line ->
+            println "Cell #" + cellnum
+            cellnum += 1
             x = line[0] as double
             y = line[1] as double
             clusterValue = line[3] as int
-            object = PathObjectTools.getObjectsForLocation(hierarchy, x / pixelSize, y / pixelSize, t, z, -1).find { it.isDetection() }
+            // Location-based lookup
+            object = PathObjectTools
+                .getObjectsForLocation(hierarchy, x / pixelSize, y / pixelSize, t, z, -1)
+                .find { it.isDetection() }
             if (object == null) {
                 print "ERROR, OBJECT NOT FOUND AT " + x + "," + y; return
             }
+
+            // Proper output is "Cell", not "null"
+            println "pre-object: $object"
+            
+            // OLD METHOD OF CHECKING; DELETE THIS WHEN READY
             if (round(ob.getNumericValue(object, "Centroid X µm")) != x || round(ob.getNumericValue(object, "Centroid Y µm")) != y) {
-                object = objects.find { round(ob.getNumericValue(it, "Centroid X µm")) == x && round(ob.getNumericValue(it, "Centroid Y µm")) == y }
+                println "OBJECT X & Y EXACT MATCH NOT FOUND: TEST FOR CLOSEBY CENTROID CANDIDATES"
+                // object = objects.find { round(ob.getNumericValue(it, "Centroid X µm")) == x && round(ob.getNumericValue(it, "Centroid Y µm")) == y }
             }
+
+            // CSV's x & y rounded to 1st decimal, while object has more decimals.
+            // Test if “object” is already within tolerance (`tol`) of the CSV centroid.
+            double tol = 0.1   // µm
+            double objX = ob.getNumericValue(object, "Centroid X µm")
+            double objY = ob.getNumericValue(object, "Centroid Y µm")
+            
+
+            // If it’s more than tol away, find a better match
+            if (Math.abs(objX - x) > tol || Math.abs(objY - y) > tol) {
+                println "object's initial x & y: " + objX + ", " + objY
+                println "Out of tolerance (dx=${objX-x}, dy=${objY-y}); searching candidates…"
+                def candidate = objects.find { det ->
+                    Math.abs(ob.getNumericValue(det, "Centroid X µm") - x) < tol &&
+                    Math.abs(ob.getNumericValue(det, "Centroid Y µm") - y) < tol
+                }
+                if (candidate != null) {
+                    object = candidate
+                    // recompute for logging
+                    objX = ob.getNumericValue(object, "Centroid X µm")
+                    objY = ob.getNumericValue(object, "Centroid Y µm")
+                    println "Switched to candidate at $objX, $objY"
+                } else {
+                    println "No candidate within +/- $tol µm; keeping original"
+                }
+            }
+
+            // if (Math.abs(objX - x) > tol || Math.abs(objY - y) > tol) {
+            //     // try to find a better match
+            //     println "COORDINATE DIFFERENCES ABOVE TOLERANCE THRESHOLD, CREATING A CANDIDATE..."
+            //     def candidate = objects.find { det ->
+            //         double dx = Math.abs(ob.getNumericValue(det, "Centroid X µm") - x)
+            //         double dy = Math.abs(ob.getNumericValue(det, "Centroid Y µm") - y)
+            //         return dx < tol && dy < tol
+            //     }
+            //     if (candidate != null) {
+            //         println "SWITCHING OBJECT TO CLOSEBY CANDIDATE"
+            //         object = candidate
+            //     }  // otherwise keep the original “object”
+            // }
+
             // Assign cluster-specific color dynamically
             if (!clusterColorMap.containsKey(clusterValue)) {
                 def clusterColor = getColorFromHex(line[4])
@@ -67,6 +122,14 @@ folder.listFiles().each { file ->
 
 
             def pathClass = clusterColorMap[clusterValue]
+            // println "CSV's x & y: $x, $y"
+            // println "object's x & y: $objX, $objY"
+            // println "cluster value: " + clusterValue
+            // println "image data: " + imageData
+            // println "hierarchy: " + hierarchy
+            // println "pixel size: " + pixelSize
+            // println "object: " + object
+
             object.setPathClass(pathClass)
 
             i = 3 //skip the X Y and Image entries
