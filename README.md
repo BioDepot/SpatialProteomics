@@ -1,5 +1,7 @@
 # Graphical and Interactive Spatial Proteomics Image Analysis Workflow
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/BioDepot/SpatialProteomics)
+
 Pre-print: bioRxiv 2025.05.23.655879; [DOI](https://doi.org/10.1101/2025.05.23.655879)
 
 ![Figures](./media/images/Figure1.png)
