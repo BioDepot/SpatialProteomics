@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><scheme description="" title="BwbSpatialProteomics" version="2.0">
+	<nodes>
+		<node id="0" name="QuPath_Segmentation" position="(289.0, 147.0)" project_name="BwbSpatialProteomics" qualified_name="BwbSpatialProteomics.OWQuPath_Segmentation.OWQuPath_Segmentation" title="QuPath_Segmentation" version=""/>
+		<node id="1" name="Launch_QuPath" position="(111.0, 214.0)" project_name="BwbSpatialProteomics" qualified_name="BwbSpatialProteomics.OWLaunch_QuPath.OWLaunch_QuPath" title="Launch QuPath (project &amp; image setup)" version=""/>
+		<node id="2" name="Export_Image_Data" position="(600.0, 142.0)" project_name="BwbSpatialProteomics" qualified_name="BwbSpatialProteomics.OWExport_Image_Data.OWExport_Image_Data" title="Export Data" version=""/>
+		<node id="3" name="Jupyter_jupyter_base" position="(765.0, 141.0)" project_name="BwbSpatialProteomics" qualified_name="BwbSpatialProteomics.OWJupyter_jupyter_base.OWJupyter_jupyter_base" title="jupyter_base" version=""/>
+		<node id="4" name="Import_Cluster_Data" position="(924.0, 142.0)" project_name="BwbSpatialProteomics" qualified_name="BwbSpatialProteomics.OWImport_Cluster_Data.OWImport_Cluster_Data" title="Import_Cluster_Data" version=""/>
+		<node id="5" name="Launch_QuPath" position="(448.0, 216.0)" project_name="BwbSpatialProteomics" qualified_name="BwbSpatialProteomics.OWLaunch_QuPath.OWLaunch_QuPath" title="Launch QuPath (check segmentation)" version=""/>
+		<node id="6" name="Launch_QuPath" position="(1089.0, 218.0)" project_name="BwbSpatialProteomics" qualified_name="BwbSpatialProteomics.OWLaunch_QuPath.OWLaunch_QuPath" title="Launch QuPath (check clustering)" version=""/>
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="qupathdir" sink_node_id="0" source_channel="qupathdir" source_node_id="1"/>
+		<link enabled="true" id="1" sink_channel="qupathdir" sink_node_id="5" source_channel="qupathdir" source_node_id="0"/>
+		<link enabled="true" id="2" sink_channel="qupathdir" sink_node_id="2" source_channel="qupathdir" source_node_id="5"/>
+		<link enabled="true" id="3" sink_channel="InputDir" sink_node_id="3" source_channel="qupathdir" source_node_id="2"/>
+		<link enabled="true" id="4" sink_channel="qupathdir" sink_node_id="4" source_channel="OutputDir" source_node_id="3"/>
+		<link enabled="true" id="5" sink_channel="qupathdir" sink_node_id="6" source_channel="qupathdir" source_node_id="4"/>
+		<link enabled="true" id="6" sink_channel="segmentationDir" sink_node_id="3" source_channel="outputDir" source_node_id="2"/>
+	</links>
+	<annotations/>
+	<thumbnail/>
+	<node_properties>
+		<properties format="pickle" node_id="0">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDwAAAGNvcmVfdG9fc2VnbWVudHECXXED
+WAUAAABDb2xvbnEEYVgOAAAAZXhwb3J0R3JhcGhpY3NxBYlYEAAAAGltYWdlX3RvX3NlZ21lbnRx
+Bl1xB1gFAAAAaW1hZ2VxCGFYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEJfXEKWAkAAABxdXBh
+dGhkaXJxC11xDEsBYXNYBwAAAGl0ZXJhdGVxDYhYDwAAAGl0ZXJhdGVTZXR0aW5nc3EOfXEPKFgN
+AAAAaXRlcmFibGVBdHRyc3EQXXERKFgPAAAAY29yZV90b19zZWdtZW50cRJYEAAAAGltYWdlX3Rv
+X3NlZ21lbnRxE2VYCAAAAG5Xb3JrZXJzcRRLAVgEAAAAZGF0YXEVY2NvbGxlY3Rpb25zCk9yZGVy
+ZWREaWN0CnEWKVJxFyhYDwAAAGNvcmVfdG9fc2VnbWVudHEYfXEZKFgJAAAAZ3JvdXBTaXplcRpY
+AQAAADFxG1gHAAAAdGhyZWFkc3EcaBtYAwAAAHJhbXEdWAEAAAAwcR51WBAAAABpbWFnZV90b19z
+ZWdtZW50cR99cSAoaBpoG2gcaBtoHWgedXVYDQAAAGl0ZXJhdGVkQXR0cnNxIV1xIihoGGgfZXVY
+CAAAAG5Xb3JrZXJzcSNLAVgOAAAAb3B0aW9uc0NoZWNrZWRxJH1xJShYCQAAAHF1cGF0aGRpcnEm
+iFgKAAAAcmVzb2x1dGlvbnEniFgPAAAAY29yZV90b19zZWdtZW50cSiIdVgKAAAAcXBwcm9qZmls
+ZXEpWBwAAAAvZGF0YS9Qcm9qZWN0L3Byb2plY3QucXBwcm9qcSpYCQAAAHF1cGF0aGRpcnErWAAA
+AABxLFgGAAAAcmVwZWF0cS2JWAoAAAByZXNvbHV0aW9ucS5YAwAAADAuNXEvWAcAAABydW5Nb2Rl
+cTBLAFgLAAAAcnVuVHJpZ2dlcnNxMV1xMlgJAAAAcXVwYXRoZGlycTNhWBMAAABzYXZlZFdpZGdl
+dEdlb21ldHJ5cTRDMgHZ0MsAAgAAAAAGxgAAAy8AAAn/AAAE2AAABsYAAANHAAAJ/wAABNUAAAAA
+AAAAAAoAcTVYDAAAAHRyaWdnZXJSZWFkeXE2fXE3WAkAAABxdXBhdGhkaXJxOIlzWAYAAAB1c2VH
+cHVxOYlYDAAAAHVzZVNjaGVkdWxlcnE6iVgLAAAAX192ZXJzaW9uX19xO0sBdS4=
+</properties>
+		<properties format="literal" node_id="1">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': False, 'qpProjFile': False, 'imageFileName': False}, 'qpProjFile': '', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xf8\x00\x00\x01a\x00\x00\x061\x00\x00\x02\xcf\x00\x00\x02\xf8\x00\x00\x01y\x00\x00\x061\x00\x00\x02\xcc\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="pickle" node_id="2">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWA8A
+AABpbWFnZV90b19leHBvcnRxA11xBFgFAAAAaW1hZ2VxBWFYFQAAAGlucHV0Q29ubmVjdGlvbnNT
+dG9yZXEGfXEHWAkAAABxdXBhdGhkaXJxCF1xCUsDYXNYBwAAAGl0ZXJhdGVxCohYDwAAAGl0ZXJh
+dGVTZXR0aW5nc3ELfXEMKFgNAAAAaXRlcmFibGVBdHRyc3ENXXEOWA8AAABpbWFnZV90b19leHBv
+cnRxD2FYCAAAAG5Xb3JrZXJzcRBLAVgEAAAAZGF0YXERY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0
+CnESKVJxE1gPAAAAaW1hZ2VfdG9fZXhwb3J0cRR9cRUoWAkAAABncm91cFNpemVxFlgBAAAAMXEX
+WAcAAAB0aHJlYWRzcRhoF1gDAAAAcmFtcRlYAQAAADBxGnVzWA0AAABpdGVyYXRlZEF0dHJzcRtd
+cRxoFGF1WAgAAABuV29ya2Vyc3EdSwFYDgAAAG9wdGlvbnNDaGVja2VkcR59cR8oWAkAAABxdXBh
+dGhkaXJxIIhYDwAAAGNvcmVfdG9fc2VnbWVudHEhiVgKAAAAcmVzb2x1dGlvbnEiiXVYCQAAAG91
+dHB1dERpcnEjWBIAAAAvZGF0YS9zZWdtZW50YXRpb25xJFgKAAAAcXBwcm9qZmlsZXElWBwAAAAv
+ZGF0YS9Qcm9qZWN0L3Byb2plY3QucXBwcm9qcSZYCQAAAHF1cGF0aGRpcnEnWAAAAABxKFgGAAAA
+cmVwZWF0cSmJWAcAAABydW5Nb2RlcSpLAFgLAAAAcnVuVHJpZ2dlcnNxK11xLFgJAAAAcXVwYXRo
+ZGlycS1hWBMAAABzYXZlZFdpZGdldEdlb21ldHJ5cS5DMgHZ0MsAAgAAAAAGxgAAAW8AAAn/AAAD
+GQAABsYAAAGHAAAJ/wAAAxYAAAAAAAAAAAoAcS9YDAAAAHRyaWdnZXJSZWFkeXEwfXExWAkAAABx
+dXBhdGhkaXJxMolzWAYAAAB1c2VHcHVxM4lYDAAAAHVzZVNjaGVkdWxlcnE0iVgLAAAAX192ZXJz
+aW9uX19xNUsBdS4=
+</properties>
+		<properties format="literal" node_id="3">{'allowRoot': True, 'autoyes': True, 'browser': '', 'certfile': '', 'clientca': '', 'clusteringOutdir': '/data/clustering', 'config': '', 'controlAreaVisible': True, 'debug': False, 'exportGraphics': True, 'generateConfig': False, 'inputConnectionsStore': {'InputDir': [4], 'segmentationDir': [4]}, 'ip': '0.0.0.0', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'keyfile': '', 'loglevel': '30', 'nWorkers': 1, 'nomathjax': False, 'optionsChecked': {'startingNotebook': True, 'type': False, 'outputNotebook': False, 'debug': False, 'generateConfig': False, 'autoyes': False, 'allowRoot': False, 'loglevel': False, 'config': False, 'transport': False, 'keyfile': False, 'certfile': False, 'clientca': False, 'nomathjax': False, 'browser': False, 'segmentationDir': True, 'clusteringOutdir': True}, 'outputNotebook': '', 'port': 8888, 'repeat': False, 'runMode': 0, 'runTriggers': ['InputDir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03O\x00\x00\x01u\x00\x00\x06\x88\x00\x00\x03\x9c\x00\x00\x03O\x00\x00\x01\x8d\x00\x00\x06\x88\x00\x00\x03\x99\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'segmentationDir': '', 'startingNotebook': '/scripts/SpatialOmicsPrivate/BWBQuPathClustering.ipynb', 'subcommand': 'notebook', 'transport': '', 'triggerReady': {'InputDir': False, 'Trigger': False}, 'type': 'notebook', 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="4">{'clustering_dir': '/data/clustering', 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {'qupathdir': [5]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'image_to_export': False, 'core_to_segment': False, 'resolution': False}, 'qpProjFile': '/data/Project/project.qpproj', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03N\x00\x00\x011\x00\x00\x06\x87\x00\x00\x02\x9f\x00\x00\x03N\x00\x00\x01I\x00\x00\x06\x87\x00\x00\x02\x9c\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="5">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {'qupathdir': [2]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'qpProjFile': True, 'imageFileName': False}, 'qpProjFile': '', 'qupathdir': '', 'repeat': False, 'runMode': 2, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xfb\x00\x00\x01\xc6\x00\x00\x064\x00\x00\x034\x00\x00\x02\xfb\x00\x00\x01\xde\x00\x00\x064\x00\x00\x031\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="6">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {'qupathdir': [6]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'qpProjFile': True, 'imageFileName': False}, 'qpProjFile': '/data/Project/project.qpproj', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\\\x00\x00\x01\xc0\x00\x00\x07\x95\x00\x00\x03.\x00\x00\x04\\\x00\x00\x01\xd8\x00\x00\x07\x95\x00\x00\x03+\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+	</node_properties>
+</scheme>
