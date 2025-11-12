@@ -19,13 +19,43 @@ Imaging visualization software is [QuPath](https://github.com/qupath/qupath)<sup
 
 ## Steps and Analysis
 
+**NOTE:**
+
+It is recommended to name QuPath projects, images, and annotations **without any spaces**. Use snake_case, kebab-case, or camelCase for names in the workflow. Otherwise, put names in "quotes" when entering names in widget entries.
+
 ### Set up QuPath project and image
 
-Open QuPath and create a project. In the project, load an image to analyze. Set an annotation for the region in the image to segment and cluster. In the annotation's properties, give the annotation a name.
+Open QuPath and create a project. 
+
+![QuPath project create](media/images/qupath_project_create.png)
+
+In the project, load an image to analyze. In the "Add images" popup, click "Choose files" to select the .tiff/.qptiff you want to analyze. For our sample image, the image type is "Fluorescence".
+
+![QuPath add image](media/images/qupath_add_image.png)
+
+When importing an image to QuPath, the image name is the file name with " - resolution #1" appended. You can remove this appended section, or rename the image name for this image, to something else. **NOTE**: Changing the image name on QuPath does not change the actual file's name.
+
+![QuPath rename image](media/images/qupath_rename_image.png)
+
+Set an annotation for the region in the image to segment and cluster. For an easy annotation option, select the circle button on the top-left section of the interface, and draw a circle on a core.
+
+![Qupath annotate](media/images/qupath_annotate.png)
+
+In the annotation's properties, give the annotation a name.
+
+![Qupath annotate name](media/images/qupath_annotation_name.png)
+
+![Qupath annotate properties](media/images/qupath_annotation.png)
+
+Going forward, keep track of the names of the image and annotations set in QuPath, as these will be used in the next steps. If any of these have spaces in their names, refer to their names **"in quotes"**.
 
 ### Cell segmentation
 
-Run the [my_stardist.groovy](./scripts/my_stardist.groovy) script with its stardist model. Pixel size resolution from the source image needs to be provided into the script.
+Run the [my_stardist.groovy](./scripts/my_stardist.groovy) script with its stardist model using the "QuPath_Segmentation" widget. Pixel size resolution from the source image needs to be provided into the script.
+
+![segmentation1](media/images/segmentation1.png)
+
+![segmentation2](media/images/segmentation2.png)
 
 ```bash
 ### ENVIRONMENT VARIABLES REQUIRED:
@@ -38,9 +68,15 @@ QuPath script -p <QuPath project file> my_stardist.groovy
 
 Outputs are segmented cells placed on the QuPath project image.
 
+![segmentation results](media/images/segmentation_results.png)
+
 ### Export segmentation data to CSV
 
-Run the [export-all-cell-measurements_240829.groovy](./scripts/export-all-cell-measurements_240829.groovy) script to export the cell segmentation data from the image to a CSV file. Script modified from [Akoya Biosciences](https://github.com/lambrechtslab/Immunity-2024) version of StarDist segmentation.
+Run the [export-all-cell-measurements_240829.groovy](./scripts/export-all-cell-measurements_240829.groovy) script to export the cell segmentation data from the image to a CSV file using the "Export Data" widget. Script modified from [Akoya Biosciences](https://github.com/lambrechtslab/Immunity-2024) version of StarDist segmentation.
+
+![export data](media/images/export_data.png)
+
+Output is stored in the /data/segmentation/ directory, but you can specify another directory if needed.
 
 ```bash
 # Adjust file path to stardist_cell_seg_model.pb in script if needed
@@ -55,19 +91,27 @@ Expected output file is all-cell-measurements.csv, containing metrics for each s
 
 ### Cell clustering and plots via notebook
 
-Use the [BWBQuPathClustering.ipynb](./scripts/BWBQuPathClustering.ipynb) notebook to use the exported segmentation data to perform unsupervised clustering of cell types using the Leiden algorithm and visualizing the clustering results as Uniform Manifold Approximation and Projections (UMAP) and heatmaps. Inside the notebook, adjust the file path to all-cell-measurements.csv. Set QuPath project image's core/annotation name in the code block `df = df[df['Parent'] == '<segmented annotation/core name>']`.
+Use the [BWBQuPathClustering.ipynb](./scripts/BWBQuPathClustering.ipynb) notebook to use the exported segmentation data to perform unsupervised clustering of cell types using the Leiden algorithm and visualizing the clustering results as Uniform Manifold Approximation and Projections (UMAP) and heatmaps. Inside the notebook, adjust the file path to all-cell-measurements.csv. Set QuPath project image's core/annotation name in the code block `df = df[df['Parent'] == '<segmented annotation/core name>']` if you do not want cluster all regions/annotations in the image.
 
-Expected output file is located in /clustering_data_export/leiden_clustering_export.csv, containing cell clustering labels and colors for each cell.
+Run all cells in the notebook to execute the analysis.
+
+![notebook run](media/images/notebook_run.png)
+
+Expected output file is located in the clustering output folder /clustering/leiden_clustering_export.csv (output directory can be changed in the widget entries), containing cell clustering labels and colors for each cell. Additional outputs for the heatmap and UMAP are stored in the cluster_plots/ folder.
 
 ### Import cell clustering data back onto QuPath
 
-Run [import_clusters.groovy](./scripts/import_clusters.groovy) to import cell clustering data back into QuPath. Once finished, QuPath can show the cells with colormaps/masks on the image. Source of the script is inspired from an [image.sc post from Mike Nelson](https://forum.image.sc/t/there-and-back-again-qupath-cytomap-cluster-analysis/43352/2). Adjustments inside the script could be required to match the equivalent of `def folder = new File("/data/clustering_data_export")` for leiden_clustering_export.csv.
+Run [import_clusters.groovy](./scripts/import_clusters.groovy) to import cell clustering data back into QuPath using the "Import_Cluster_Data" widget. Once finished, QuPath can show the cells with colormaps/masks on the image. Source of the script is inspired from an [image.sc post from Mike Nelson](https://forum.image.sc/t/there-and-back-again-qupath-cytomap-cluster-analysis/43352/2). Adjustments inside the script could be required to match the equivalent of `def folder = new File("/data/clustering_data_export")` for leiden_clustering_export.csv.
+
+![cluster import](media/images/cluster_import.png)
 
 ```bash
 QuPath script -p <QuPath project file> import_clusters.groovy
 ```
 
 Outputs are cluster-colored cells on the QuPath project image.
+
+![cluster_results](media/images/cluster_results.png)
 
 ## Raw data files and image dataset
 
