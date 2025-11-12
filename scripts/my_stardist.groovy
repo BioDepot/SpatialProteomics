@@ -36,7 +36,7 @@ if (imageData == null) {
 QP.setDefaultImageData(imageData)
 
 // Define the StarDist model path
-def pathModel = '/data/stardist_cell_seg_model.pb'
+def pathModel = '/data/scripts/stardist_cell_seg_model.pb'
 def resolution = 0.5
 if(System.getenv("resolution") != null) {
     resolution = Double.parseDouble(System.getenv("resolution"))

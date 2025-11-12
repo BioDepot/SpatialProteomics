@@ -22,43 +22,45 @@
 	<node_properties>
 		<properties format="pickle" node_id="0">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDwAAAGNvcmVfdG9fc2VnbWVudHECXXED
 WAUAAABDb2xvbnEEYVgOAAAAZXhwb3J0R3JhcGhpY3NxBYlYEAAAAGltYWdlX3RvX3NlZ21lbnRx
-Bl1xB1gFAAAAaW1hZ2VxCGFYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEJfXEKWAkAAABxdXBh
-dGhkaXJxC11xDEsBYXNYBwAAAGl0ZXJhdGVxDYhYDwAAAGl0ZXJhdGVTZXR0aW5nc3EOfXEPKFgN
-AAAAaXRlcmFibGVBdHRyc3EQXXERKFgPAAAAY29yZV90b19zZWdtZW50cRJYEAAAAGltYWdlX3Rv
-X3NlZ21lbnRxE2VYCAAAAG5Xb3JrZXJzcRRLAVgEAAAAZGF0YXEVY2NvbGxlY3Rpb25zCk9yZGVy
-ZWREaWN0CnEWKVJxFyhYDwAAAGNvcmVfdG9fc2VnbWVudHEYfXEZKFgJAAAAZ3JvdXBTaXplcRpY
-AQAAADFxG1gHAAAAdGhyZWFkc3EcaBtYAwAAAHJhbXEdWAEAAAAwcR51WBAAAABpbWFnZV90b19z
-ZWdtZW50cR99cSAoaBpoG2gcaBtoHWgedXVYDQAAAGl0ZXJhdGVkQXR0cnNxIV1xIihoGGgfZXVY
-CAAAAG5Xb3JrZXJzcSNLAVgOAAAAb3B0aW9uc0NoZWNrZWRxJH1xJShYCQAAAHF1cGF0aGRpcnEm
-iFgKAAAAcmVzb2x1dGlvbnEniFgPAAAAY29yZV90b19zZWdtZW50cSiIdVgKAAAAcXBwcm9qZmls
-ZXEpWBwAAAAvZGF0YS9Qcm9qZWN0L3Byb2plY3QucXBwcm9qcSpYCQAAAHF1cGF0aGRpcnErWAAA
+Bl1xB1glAAAAMjQwNTA4X1ZFVF9RQ1RNQTJfQTJfNTVwX1NjYW4xLnFwdGlmZnEIYVgVAAAAaW5w
+dXRDb25uZWN0aW9uc1N0b3JlcQl9cQpYCQAAAHF1cGF0aGRpcnELXXEMSwFhc1gHAAAAaXRlcmF0
+ZXENiFgPAAAAaXRlcmF0ZVNldHRpbmdzcQ59cQ8oWA0AAABpdGVyYWJsZUF0dHJzcRBdcREoWA8A
+AABjb3JlX3RvX3NlZ21lbnRxElgQAAAAaW1hZ2VfdG9fc2VnbWVudHETZVgIAAAAbldvcmtlcnNx
+FEsBWAQAAABkYXRhcRVjY29sbGVjdGlvbnMKT3JkZXJlZERpY3QKcRYpUnEXKFgPAAAAY29yZV90
+b19zZWdtZW50cRh9cRkoWAkAAABncm91cFNpemVxGlgBAAAAMXEbWAcAAAB0aHJlYWRzcRxoG1gD
+AAAAcmFtcR1YAQAAADBxHnVYEAAAAGltYWdlX3RvX3NlZ21lbnRxH31xIChoGmgbaBxoG2gdaB51
+dVgNAAAAaXRlcmF0ZWRBdHRyc3EhXXEiKGgYaB9ldVgIAAAAbldvcmtlcnNxI0sBWA4AAABvcHRp
+b25zQ2hlY2tlZHEkfXElKFgJAAAAcXVwYXRoZGlycSaIWAoAAAByZXNvbHV0aW9ucSeIWA8AAABj
+b3JlX3RvX3NlZ21lbnRxKIh1WAoAAABxcHByb2pmaWxlcSlYNQAAAC9kYXRhL3NwYXRpYWxfc2Ft
+cGxlZGF0YS9TYW1wbGVQcm9qZWN0L3Byb2plY3QucXBwcm9qcSpYCQAAAHF1cGF0aGRpcnErWAAA
 AABxLFgGAAAAcmVwZWF0cS2JWAoAAAByZXNvbHV0aW9ucS5YAwAAADAuNXEvWAcAAABydW5Nb2Rl
 cTBLAFgLAAAAcnVuVHJpZ2dlcnNxMV1xMlgJAAAAcXVwYXRoZGlycTNhWBMAAABzYXZlZFdpZGdl
-dEdlb21ldHJ5cTRDMgHZ0MsAAgAAAAAGxgAAAy8AAAn/AAAE2AAABsYAAANHAAAJ/wAABNUAAAAA
+dEdlb21ldHJ5cTRDMgHZ0MsAAgAAAAADBQAAAhsAAAY+AAADqQAAAwUAAAIbAAAGPgAAA6kAAAAA
 AAAAAAoAcTVYDAAAAHRyaWdnZXJSZWFkeXE2fXE3WAkAAABxdXBhdGhkaXJxOIlzWAYAAAB1c2VH
 cHVxOYlYDAAAAHVzZVNjaGVkdWxlcnE6iVgLAAAAX192ZXJzaW9uX19xO0sBdS4=
 </properties>
-		<properties format="literal" node_id="1">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': False, 'qpProjFile': False, 'imageFileName': False}, 'qpProjFile': '', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xf8\x00\x00\x01a\x00\x00\x061\x00\x00\x02\xcf\x00\x00\x02\xf8\x00\x00\x01y\x00\x00\x061\x00\x00\x02\xcc\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="1">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': False, 'qpProjFile': False, 'imageFileName': False}, 'qpProjFile': '', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x01\x83\x00\x00\x02\xc8\x00\x00\x04\xbc\x00\x00\x046\x00\x00\x01\x83\x00\x00\x02\xe0\x00\x00\x04\xbc\x00\x00\x043\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="2">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWA8A
-AABpbWFnZV90b19leHBvcnRxA11xBFgFAAAAaW1hZ2VxBWFYFQAAAGlucHV0Q29ubmVjdGlvbnNT
-dG9yZXEGfXEHWAkAAABxdXBhdGhkaXJxCF1xCUsDYXNYBwAAAGl0ZXJhdGVxCohYDwAAAGl0ZXJh
-dGVTZXR0aW5nc3ELfXEMKFgNAAAAaXRlcmFibGVBdHRyc3ENXXEOWA8AAABpbWFnZV90b19leHBv
-cnRxD2FYCAAAAG5Xb3JrZXJzcRBLAVgEAAAAZGF0YXERY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0
-CnESKVJxE1gPAAAAaW1hZ2VfdG9fZXhwb3J0cRR9cRUoWAkAAABncm91cFNpemVxFlgBAAAAMXEX
-WAcAAAB0aHJlYWRzcRhoF1gDAAAAcmFtcRlYAQAAADBxGnVzWA0AAABpdGVyYXRlZEF0dHJzcRtd
-cRxoFGF1WAgAAABuV29ya2Vyc3EdSwFYDgAAAG9wdGlvbnNDaGVja2VkcR59cR8oWAkAAABxdXBh
-dGhkaXJxIIhYDwAAAGNvcmVfdG9fc2VnbWVudHEhiVgKAAAAcmVzb2x1dGlvbnEiiXVYCQAAAG91
-dHB1dERpcnEjWBIAAAAvZGF0YS9zZWdtZW50YXRpb25xJFgKAAAAcXBwcm9qZmlsZXElWBwAAAAv
-ZGF0YS9Qcm9qZWN0L3Byb2plY3QucXBwcm9qcSZYCQAAAHF1cGF0aGRpcnEnWAAAAABxKFgGAAAA
+AABpbWFnZV90b19leHBvcnRxA11xBFglAAAAMjQwNTA4X1ZFVF9RQ1RNQTJfQTJfNTVwX1NjYW4x
+LnFwdGlmZnEFYVgVAAAAaW5wdXRDb25uZWN0aW9uc1N0b3JlcQZ9cQdYCQAAAHF1cGF0aGRpcnEI
+XXEJSwNhc1gHAAAAaXRlcmF0ZXEKiFgPAAAAaXRlcmF0ZVNldHRpbmdzcQt9cQwoWA0AAABpdGVy
+YWJsZUF0dHJzcQ1dcQ5YDwAAAGltYWdlX3RvX2V4cG9ydHEPYVgIAAAAbldvcmtlcnNxEEsBWAQA
+AABkYXRhcRFjY29sbGVjdGlvbnMKT3JkZXJlZERpY3QKcRIpUnETWA8AAABpbWFnZV90b19leHBv
+cnRxFH1xFShYCQAAAGdyb3VwU2l6ZXEWWAEAAAAxcRdYBwAAAHRocmVhZHNxGGgXWAMAAAByYW1x
+GVgBAAAAMHEadXNYDQAAAGl0ZXJhdGVkQXR0cnNxG11xHGgUYXVYCAAAAG5Xb3JrZXJzcR1LAVgO
+AAAAb3B0aW9uc0NoZWNrZWRxHn1xHyhYCQAAAHF1cGF0aGRpcnEgiFgPAAAAY29yZV90b19zZWdt
+ZW50cSGJWAoAAAByZXNvbHV0aW9ucSKJdVgJAAAAb3V0cHV0RGlycSNYEgAAAC9kYXRhL3NlZ21l
+bnRhdGlvbnEkWAoAAABxcHByb2pmaWxlcSVYNQAAAC9kYXRhL3NwYXRpYWxfc2FtcGxlZGF0YS9T
+YW1wbGVQcm9qZWN0L3Byb2plY3QucXBwcm9qcSZYCQAAAHF1cGF0aGRpcnEnWAAAAABxKFgGAAAA
 cmVwZWF0cSmJWAcAAABydW5Nb2RlcSpLAFgLAAAAcnVuVHJpZ2dlcnNxK11xLFgJAAAAcXVwYXRo
-ZGlycS1hWBMAAABzYXZlZFdpZGdldEdlb21ldHJ5cS5DMgHZ0MsAAgAAAAAGxgAAAW8AAAn/AAAD
-GQAABsYAAAGHAAAJ/wAAAxYAAAAAAAAAAAoAcS9YDAAAAHRyaWdnZXJSZWFkeXEwfXExWAkAAABx
+ZGlycS1hWBMAAABzYXZlZFdpZGdldEdlb21ldHJ5cS5DMgHZ0MsAAgAAAAADkgAAAY0AAAbLAAAD
+NwAAA5IAAAGlAAAGywAAAzQAAAAAAAAAAAoAcS9YDAAAAHRyaWdnZXJSZWFkeXEwfXExWAkAAABx
 dXBhdGhkaXJxMolzWAYAAAB1c2VHcHVxM4lYDAAAAHVzZVNjaGVkdWxlcnE0iVgLAAAAX192ZXJz
 aW9uX19xNUsBdS4=
 </properties>
-		<properties format="literal" node_id="3">{'allowRoot': True, 'autoyes': True, 'browser': '', 'certfile': '', 'clientca': '', 'clusteringOutdir': '/data/clustering', 'config': '', 'controlAreaVisible': True, 'debug': False, 'exportGraphics': True, 'generateConfig': False, 'inputConnectionsStore': {'InputDir': [4], 'segmentationDir': [4]}, 'ip': '0.0.0.0', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'keyfile': '', 'loglevel': '30', 'nWorkers': 1, 'nomathjax': False, 'optionsChecked': {'startingNotebook': True, 'type': False, 'outputNotebook': False, 'debug': False, 'generateConfig': False, 'autoyes': False, 'allowRoot': False, 'loglevel': False, 'config': False, 'transport': False, 'keyfile': False, 'certfile': False, 'clientca': False, 'nomathjax': False, 'browser': False, 'segmentationDir': True, 'clusteringOutdir': True}, 'outputNotebook': '', 'port': 8888, 'repeat': False, 'runMode': 0, 'runTriggers': ['InputDir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03O\x00\x00\x01u\x00\x00\x06\x88\x00\x00\x03\x9c\x00\x00\x03O\x00\x00\x01\x8d\x00\x00\x06\x88\x00\x00\x03\x99\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'segmentationDir': '', 'startingNotebook': '/scripts/SpatialOmicsPrivate/BWBQuPathClustering.ipynb', 'subcommand': 'notebook', 'transport': '', 'triggerReady': {'InputDir': False, 'Trigger': False}, 'type': 'notebook', 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
-		<properties format="literal" node_id="4">{'clustering_dir': '/data/clustering', 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {'qupathdir': [5]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'image_to_export': False, 'core_to_segment': False, 'resolution': False}, 'qpProjFile': '/data/Project/project.qpproj', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03N\x00\x00\x011\x00\x00\x06\x87\x00\x00\x02\x9f\x00\x00\x03N\x00\x00\x01I\x00\x00\x06\x87\x00\x00\x02\x9c\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
-		<properties format="literal" node_id="5">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {'qupathdir': [2]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'qpProjFile': True, 'imageFileName': False}, 'qpProjFile': '', 'qupathdir': '', 'repeat': False, 'runMode': 2, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xfb\x00\x00\x01\xc6\x00\x00\x064\x00\x00\x034\x00\x00\x02\xfb\x00\x00\x01\xde\x00\x00\x064\x00\x00\x031\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
-		<properties format="literal" node_id="6">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {'qupathdir': [6]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'qpProjFile': True, 'imageFileName': False}, 'qpProjFile': '/data/Project/project.qpproj', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\\\x00\x00\x01\xc0\x00\x00\x07\x95\x00\x00\x03.\x00\x00\x04\\\x00\x00\x01\xd8\x00\x00\x07\x95\x00\x00\x03+\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="3">{'allowRoot': True, 'autoyes': True, 'browser': '', 'certfile': '', 'clientca': '', 'clusteringOutdir': '/data/clustering', 'config': '', 'controlAreaVisible': True, 'debug': False, 'exportGraphics': True, 'generateConfig': False, 'inputConnectionsStore': {'InputDir': [4], 'segmentationDir': [4]}, 'ip': '0.0.0.0', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'keyfile': '', 'loglevel': '30', 'nWorkers': 1, 'nomathjax': False, 'optionsChecked': {'startingNotebook': True, 'type': False, 'outputNotebook': False, 'debug': False, 'generateConfig': False, 'autoyes': False, 'allowRoot': False, 'loglevel': False, 'config': False, 'transport': False, 'keyfile': False, 'certfile': False, 'clientca': False, 'nomathjax': False, 'browser': False, 'segmentationDir': True, 'clusteringOutdir': True}, 'outputNotebook': '', 'port': 8888, 'repeat': False, 'runMode': 0, 'runTriggers': ['InputDir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03O\x00\x00\x01u\x00\x00\x06\x88\x00\x00\x03\x9c\x00\x00\x03O\x00\x00\x01\x8d\x00\x00\x06\x88\x00\x00\x03\x99\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'segmentationDir': '/data/segmentation', 'startingNotebook': '/data/scripts/BWBQuPathClustering.ipynb', 'subcommand': 'notebook', 'transport': '', 'triggerReady': {'InputDir': False, 'Trigger': False}, 'type': 'notebook', 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="4">{'clustering_dir': '/data/clustering', 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {'qupathdir': [5]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'image_to_export': False, 'core_to_segment': False, 'resolution': False}, 'qpProjFile': '/data/spatial_sampledata/SampleProject/project.qpproj', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\xba\x00\x00\x01\xc3\x00\x00\x07\xf3\x00\x00\x031\x00\x00\x04\xba\x00\x00\x01\xdb\x00\x00\x07\xf3\x00\x00\x03.\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="5">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {'qupathdir': [2]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'qpProjFile': True, 'imageFileName': False}, 'qpProjFile': '', 'qupathdir': '', 'repeat': False, 'runMode': 2, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xfb\x00\x00\x01\xc6\x00\x00\x064\x00\x00\x03\x19\x00\x00\x02\xfb\x00\x00\x01\xc6\x00\x00\x064\x00\x00\x03\x19\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="6">{'controlAreaVisible': True, 'exportGraphics': True, 'imageFileName': '', 'inputConnectionsStore': {'qupathdir': [6]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'qupathdir': True, 'qpProjFile': True, 'imageFileName': False}, 'qpProjFile': '', 'qupathdir': '', 'repeat': False, 'runMode': 0, 'runTriggers': ['qupathdir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\\\x00\x00\x01\xc0\x00\x00\x07\x95\x00\x00\x03.\x00\x00\x04\\\x00\x00\x01\xd8\x00\x00\x07\x95\x00\x00\x03+\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {'qupathdir': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 	</node_properties>
 </scheme>
