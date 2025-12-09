@@ -1,0 +1,4 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+  "postStartCommand": "docker run --rm -p 6080:6080 -v /workspaces/SpatialProteomics/:/data -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/.X11-unix:/tmp/.X11-unix --privileged --group-add root -e STARTING_WORKFLOW=/data/workflows/BwbSpatialProteomics/BwbSpatialProteomics.ows biodepot/bwb"
+}

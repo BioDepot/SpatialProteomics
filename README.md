@@ -1,6 +1,10 @@
 # Graphical and Interactive Spatial Proteomics Image Analysis Workflow
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/BioDepot/SpatialProteomics)
+# [Open in Codespaces](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=979017184&skip_quickstart=true)
+
+Click the link above to open the workflow in GitHub Codespaces.
+
+For more information on how to use Bwb, click this [LINK](https://biodepot.github.io/training/).
 
 Pre-print: bioRxiv 2025.05.23.655879; [DOI](https://doi.org/10.1101/2025.05.23.655879)
 
