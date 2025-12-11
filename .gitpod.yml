@@ -1,3 +1,0 @@
-tasks:
-  - name: Start Bwb
-    command: docker run --rm -p 6080:6080 -v /workspace/SpatialProteomics/:/data -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/.X11-unix:/tmp/.X11-unix --privileged --group-add root -e STARTING_WORKFLOW=/data/workflows/BwbSpatialProteomics/BwbSpatialProteomics.ows biodepot/bwb
