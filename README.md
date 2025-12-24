@@ -4,6 +4,8 @@
 
 Click the link above to open the workflow in GitHub Codespaces.
 
+A demonstration video for this workflow is available at [https://youtu.be/vHjdCAZQhfE](https://youtu.be/vHjdCAZQhfE)
+
 For more information on how to use Bwb, click this [LINK](https://biodepot.github.io/training/).
 
 Pre-print: bioRxiv 2025.05.23.655879; [DOI](https://doi.org/10.1101/2025.05.23.655879)
@@ -197,3 +199,14 @@ International Conference on Medical Image Computing and Computer-Assisted Interv
 All graphical workflows are implemented in the Bwb platform. To learn more about the Bwb platform, please refer to https://github.com/BioDepot/BioDepot-workflow-builder
 
 Biodepot training portal: https://biodepot.github.io/training/
+
+## Troubleshooting and tips
+
+- To stop and start your codespace to save resources, check out https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace
+- To learn more about free storage and compute time per month for GitHub users on Codespaces, please visit https://docs.github.com/en/billing/concepts/product-billing/github-codespaces
+- You can change the size of the Biodepot window by right clicking on the background to bring up the "Resize" menu. To learn more about the **Bwb desktop environment**, please visit https://biodepot.github.io/training/basic_training/desk_env/
+- Please note that the image annotation in the demo video is case sensitive.
+- If a certain widget in one of the workflow fails, check the widget's **console** to see the error menssage. If it is the download widget failing, see if one of the links is no longer available, or rerun the widget if the files are partially downloaded but abruptly stopped before completing.
+- Basic window manipulation help at https://github.com/BioDepot/BioDepot-workflow-builder?tab=readme-ov-file#basic-window-manipulations
+
+
