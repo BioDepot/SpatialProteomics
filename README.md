@@ -23,12 +23,29 @@ Imaging visualization software is [QuPath](https://github.com/qupath/qupath)<sup
 
 ## Steps and Analysis
 
-**NOTE:**
+### Start Codespaces
 
-It is recommended to name QuPath projects, images, and annotations **without any spaces**. Use snake_case, kebab-case, or camelCase for names in the workflow. Otherwise, put names in "quotes" when entering names in widget entries.
+Create a codespace for this repository using the link provided at the top of this README or the green "<> Code" button.
+
+**Machine type of at least "4-core" (16GB RAM 32 GB) is required to run this workflow.**
+
+When you create a codespace, you will see the VS Code interface launching a copy of the repository.
+
+![Codespace launch](media\images\codespaces_launch.png)
+
+A startup script will run to set up Docker and Bwb. When complete, you will see in the "PORTS" tab a link with port 6080 available. 
+
+![Port and link](media\images\codespaces_bwb_link_port.png)
+
+Open the link on the browser to view Bwb. The spatial proteomics workflow will be automatically opened.
 
 ### Set up QuPath project and image
 
+Open the first QuPath widget and press the blue "Start button. QuPath will launch.
+
+**NOTE:**
+
+It is recommended to name QuPath projects, images, and annotations **without any spaces**. Use snake_case, kebab-case, or camelCase for names in the workflow. Otherwise, put names in "quotes" when entering names in widget entries.
 Open QuPath and create a project. 
 
 ![QuPath project create](media/images/qupath_project_create.png)
