@@ -33,11 +33,11 @@ Create a codespace for this repository using the link provided at the top of thi
 
 When you create a codespace, you will see the VS Code interface launching a copy of the repository.
 
-![Codespace launch](media\images\codespaces_launch.png)
+![Codespace launch](media/images/codespaces_launch.png)
 
 A startup script will run to set up Docker and Bwb. When complete, you will see in the "PORTS" tab a link with port 6080 available. 
 
-![Port and link](media\images\codespaces_bwb_link_port.png)
+![Port and link](media/images/codespaces_bwb_link_port.png)
 
 Open the link on the browser to view Bwb. The spatial proteomics workflow will be automatically opened.
 
