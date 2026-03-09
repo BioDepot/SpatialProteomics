@@ -48,6 +48,7 @@ class OWJupyter_jupyter_base(OWBwBWidget):
     browser=pset(None)
     segmentationDir=pset(None)
     clusteringOutdir=pset(None)
+    combat=pset(True)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Jupyter_jupyter_base")) as f:
