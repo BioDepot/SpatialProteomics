@@ -19,9 +19,11 @@ Scripts from the Biodepot spatial proteomics workflow.
 
 Imaging visualization software is [QuPath](https://github.com/qupath/qupath)<sup>[1]</sup>, this workflow uses [version 0.5.1](https://github.com/qupath/qupath/releases/tag/v0.5.1). In our workflow, QuPath is used to create QuPath projects, view and modify spatial images.
 
-.groovy scripts require [Groovy](https://groovy-lang.org/) version >=2.4. Additional installation to install QuPath-related packages to Groovy are also required, obtained from [QuPath StarDist extension](https://github.com/qupath/qupath-extension-stardist)<sup>[2]</sup> version >=0.5.0.
+.groovy scripts require [Groovy](https://groovy-lang.org/) version >=2.4. Additional installation to install QuPath-related packages to Groovy are also required, obtained from [QuPath StarDist extension](https://github.com/qupath/qupath-extension-stardist)<sup>[2]</sup> version 0.5.0.
 
-[Jupyter Notebook](https://jupyter.org/) with Python 3 kernel is required.
+[Jupyter Notebook](https://jupyter.org/) with Python 3 (version >= 11.1.2) kernel is required.
+
+Python packages used for the Jupyter Notebook are listed in [requirements.txt](./requirements.txt).
 
 ## Steps and Analysis
 
@@ -116,6 +118,8 @@ Expected output file is all-cell-measurements.csv, containing metrics for each s
 
 Use the [BWBQuPathClustering.ipynb](./scripts/BWBQuPathClustering.ipynb) notebook to use the exported segmentation data to perform unsupervised clustering of cell types using the Leiden algorithm and visualizing the clustering results as Uniform Manifold Approximation and Projections (UMAP) and heatmaps. Inside the notebook, adjust the file path to all-cell-measurements.csv. Set QuPath project image's core/annotation name in the code block `df = df[df['Parent'] == '<segmented annotation/core name>']` if you do not want cluster all regions/annotations in the image.
 
+ComBat <sup>[3]</sup> batch effect correction is applied by default when running this notebook, and it is recommended to use when clustering multiple regions/annotations. To disable ComBat, deselect "Apply ComBat batch correction" in the Jupyter Notebook widget's optional entries.
+
 Run all cells in the notebook to execute the analysis.
 
 ![notebook run](media/images/notebook_run.png)
@@ -184,6 +188,8 @@ There is one spatial proteomics image file named 240508_VET_QCTMA2_A2_55p_Scan1.
 
 The remaining files and directories in the dataset were generated from running the workflow on one of the cores. The selected core (#6, HCC) was annotated on QuPath and named "Test Core" in its properties.
 
+**An output sample for the colon TMA core is provided in the ["example tma output colon"](./example%20tma%20output%20colon/)** folder.
+
 #### paper_testdata/
 
 The QuPath project folder generated for the TMA image. From the project.qpproj file, the core's segmentation and colored clustering results (generated at the end of the workflow) are shown in the project image.
@@ -210,6 +216,9 @@ https://doi.org/10.1038/s41598-017-17204-5
 Uwe Schmidt, Martin Weigert, Coleman Broaddus, and Gene Myers.
 Cell Detection with Star-convex Polygons.
 International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), Granada, Spain, September 2018.
+
+[3]
+W. Evan Johnson, Cheng Li, and Ariel Rabinovic. Adjusting batch effects in microarray expression data using empirical bayes methods. Biostatistics, 8(1):118–127, apr 2006. URL: https://doi.org/10.1093/biostatistics/kxj037, doi:10.1093/biostatistics/kxj037.
 
 ## Biodepot-workflow-builder (Bwb)
 
