@@ -206,6 +206,12 @@ A copy of the workflow's Jupyter Notebook; this version has cell block outputs w
 
 The output at the final step of the Jupyter Notebook, containing the cell clustering results for the image core. This file is used in the import_clusters.groovy script.
 
+## Smoke test
+
+A downsampled version of the colon TMA core is also provided in this repository, located at [tma_colon_downsample.ome.tif](./tma_colon_downsample.ome.tif). Smoke test files from running this core through the workflow are provided in the [smoke_test](./smoke_test/) directory.
+
+**NOTE:** The downsampled image is in a lower resolution that may affect segmentation and clustering when compared to processing the original. Use this only to test the workflow within this repository. Refer to the original full resolution image on Zenodo.
+
 ## References
 
 [1]
