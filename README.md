@@ -180,7 +180,7 @@ There is one spatial proteomics image file named 240508_VET_QCTMA2_A2_55p_Scan1.
 5. Squamous cell carcinoma (lung)
 6. Hepatocellular carcinoma (HCC - liver)
 7. Lung carcinoid
-8. Colon cancer
+8. Colorectal cancer
 
 ![TMA Cores](./media/images/tma_cores_numbered.png)
 
@@ -188,7 +188,7 @@ There is one spatial proteomics image file named 240508_VET_QCTMA2_A2_55p_Scan1.
 
 The remaining files and directories in the dataset were generated from running the workflow on one of the cores. The selected core (#6, HCC) was annotated on QuPath and named "Test Core" in its properties.
 
-**An output sample for the colon TMA core is provided in the ["example tma output colon"](./example%20tma%20output%20colon/)** folder.
+**An output sample for the colorectal TMA core is provided in the ["smoke_test/"](./smoke_test/)** folder.
 
 #### paper_testdata/
 
@@ -208,7 +208,7 @@ The output at the final step of the Jupyter Notebook, containing the cell cluste
 
 ## Smoke test
 
-A downsampled version of the colon TMA core is also provided in this repository, located at [tma_colon_downsample.ome.tif](./tma_colon_downsample.ome.tif). Smoke test files from running this core through the workflow are provided in the [smoke_test](./smoke_test/) directory.
+A downsampled version of the colorectal TMA core is also provided in this repository, located at [tma_colorectal_downsample.ome.tif](./tma_colorectal_downsample.ome.tif). Smoke test files from running this core through the workflow are provided in the [smoke_test](./smoke_test/) directory.
 
 **NOTE:** The downsampled image is in a lower resolution that may affect segmentation and clustering when compared to processing the original. Use this only to test the workflow within this repository. Refer to the original full resolution image on Zenodo.
 
