@@ -184,6 +184,12 @@ There is one spatial proteomics image file named 240508_VET_QCTMA2_A2_55p_Scan1.
 
 ![TMA Cores](./media/images/tma_cores_numbered.png)
 
+**NOTE**: For best clustering results, exclude the following markers for this image:
+
+```
+["DAPI", "CD123", "TOX", "CD11b", "p16", "CD66b", "LAG-3", "IFNG", "H2A.X", "GP100", "T62", "T55", "BX090"]
+````
+
 ### Workflow outputs
 
 The remaining files and directories in the dataset were generated from running the workflow on one of the cores. The selected core (#6, HCC) was annotated on QuPath and named "Test Core" in its properties.
