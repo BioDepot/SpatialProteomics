@@ -120,6 +120,8 @@ Use the [BWBQuPathClustering.ipynb](./scripts/BWBQuPathClustering.ipynb) noteboo
 
 ComBat <sup>[3]</sup> batch effect correction is applied by default when running this notebook, and it is recommended to use when clustering multiple regions/annotations. To disable ComBat, deselect "Apply ComBat batch correction" in the Jupyter Notebook widget's optional entries.
 
+Three UMAPs are created after running the notebook. The main UMAP displays cells colored by their cluster. The other two UMAPs have cells colored by their image source or annotation/region. The latter two are useful when clustering cells from multiple images or regions of interest.
+
 Run all cells in the notebook to execute the analysis.
 
 ![notebook run](media/images/notebook_run.png)
@@ -211,6 +213,14 @@ A copy of the workflow's Jupyter Notebook; this version has cell block outputs w
 #### clustering_data_export/leiden_clustering_export.csv
 
 The output at the final step of the Jupyter Notebook, containing the cell clustering results for the image core. This file is used in the import_clusters.groovy script.
+
+## Batch correction
+
+ComBat <sup>[3]</sup> batch effect correction is an option to apply when clustering multiple regions of interest/annotations or images. In the Jupyter Notebook, there is the section within the clustering function where combat runs on either `'region'` or `'image'`.
+
+An example of resulting UMAPs when clustering with and without batch correction on the two tonsil cores from 240508_VET_QCTMA2_A2_55p_Scan1.qptiff is shown below:
+
+![batch](media/images/batch_corrections.png)
 
 ## Smoke test
 
