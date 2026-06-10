@@ -2,13 +2,25 @@
 
 # [Open in Codespaces](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=979017184&skip_quickstart=true)
 
+## About
+
+**We present a modular and interactive spatial proteomic image analysis workflow with individual containerized steps that empowers biomedical researchers to reproducibly execute and customize complex analyses. Our workflow consists of cell segmentation, unsupervised clustering with optional batch correction, validation of clusters on the image, and cell type clustering results visualization.**
+
+## Publications
+
+Pre-print: bioRxiv 2025.05.23.655879; [DOI](https://doi.org/10.1101/2025.05.23.655879)
+
+(To appear in Gigabyte)
+
+## Demo
+
 Click the link above to open the workflow in GitHub Codespaces.
 
 A demonstration video for this workflow is available at [https://youtu.be/vHjdCAZQhfE](https://youtu.be/vHjdCAZQhfE)
 
 For more information on how to use Bwb, click this [LINK](https://biodepot.github.io/training/).
 
-Pre-print: bioRxiv 2025.05.23.655879; [DOI](https://doi.org/10.1101/2025.05.23.655879)
+
 
 ![Figures](./media/images/Figure1.png)
 
@@ -213,6 +225,13 @@ A copy of the workflow's Jupyter Notebook; this version has cell block outputs w
 #### clustering_data_export/leiden_clustering_export.csv
 
 The output at the final step of the Jupyter Notebook, containing the cell clustering results for the image core. This file is used in the import_clusters.groovy script.
+
+### Relationship between paper figures and provided data and scripts
+**Figure 3 (tonsil tissue)** - The tonsil results were generated from stained tonsil tissue sample image. Cell segmentation was performed using scripts/my_stardist.groovy and [stardist_cell_seg_model.pb](scripts/stardist_cell_seg_model.pb); cell data was exported using [export-all-cell-measurements_240829.groovy](scripts/export-all-cell-measurements_240829.groovy). Leiden clustering, heatmap, and UMAP outputs (panels b and c) were generated using [BWBQuPathClustering.ipynb](scripts/BWBQuPathClustering.ipynb) (a copy with cell block outputs is also provided in the Zenodo dataset). The cluster colormap overlay on the tissue image (panel d) was produced by scripts/import_clusters.groovy using clustering_data_export/leiden_clustering_export.csv from the Zenodo dataset.
+
+**Figure 4 (colorectal cancer tissue)** - The CRC results were generated from core 8 of 240508_VET_QCTMA2_A2_55p_Scan1.qptiff. The same scripts were used as described for Figure 3. A downsampled version of this core ([tma_colorectal_downsample.ome.tif](tma_colorectal_downsample.ome.tif)) is provided in this repository for workflow testing purposes (see the Smoke test section); refer to the full-resolution image on Zenodo for reproducing the paper figures. Pre-generated outputs from running the full workflow on this core are provided in the [smoke_test/](smoke_test/) directory.
+
+**Figure 5 (batch correction comparison UMAPs)** - Both tonsil cores (cores 2 and 3) from 240508_VET_QCTMA2_A2_55p_Scan1.qptiff were clustered together. The two panels were produced by running scripts/BWBQuPathClustering.ipynb with ComBat batch correction enabled (panel a) and disabled (panel b) via the corresponding toggle in the notebook. When multiple regions are clustered, the notebook automatically generates an additional UMAP colored by region/image source, as shown in both panels. Batch correction for this case is also shown in the next section.
 
 ## Batch correction
 
