@@ -1,2 +1,2 @@
 #! /bin/bash
-exec "$(dirname "$0")/.devcontainer/start_bwb.sh"
+exec bash "$(dirname "$0")/.devcontainer/start_bwb.sh"

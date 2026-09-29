@@ -1,4 +1,4 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
-  "postStartCommand": "chmod +x .devcontainer/start_bwb.sh restart_bwb.sh && .devcontainer/start_bwb.sh"
+  "postStartCommand": "bash .devcontainer/start_bwb.sh"
 }
